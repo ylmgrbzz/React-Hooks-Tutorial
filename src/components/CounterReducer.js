@@ -15,13 +15,32 @@ const reducer = (state, action) => {
 };
 
 const CounterReducer = () => {
-  useReducer(reducer, initialState);
+  const [count, dispatch] = useReducer(reducer, initialState);
   return (
     <div>
-      <h1>Counter Reducer</h1>
-      <button>Increment</button>
-      <button>Decrement</button>
-      <button>Reset</button>
+      <h1>Counter Reducer {count} </h1>
+      <button
+        onClick={() => {
+          dispatch("increment");
+        }}
+      >
+        Increment
+      </button>
+      <button
+        onClick={() => {
+          dispatch("decrement");
+        }}
+      >
+        Decrement
+      </button>
+
+      <button
+        onClick={() => {
+          dispatch("reset");
+        }}
+      >
+        Reset
+      </button>
     </div>
   );
 };
