@@ -1,7 +1,12 @@
 import React from "react";
+import ComponentF from "./ComponentF";
 
 const ComponentE = () => {
-  return <div>ComponentE</div>;
+  return (
+    <div>
+      <ComponentF />
+    </div>
+  );
 };
 
 export default ComponentE;

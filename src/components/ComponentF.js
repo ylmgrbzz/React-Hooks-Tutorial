@@ -1,7 +1,16 @@
 import React from "react";
+import { userContext } from "../App";
 
-const ComponentF = () => {
-  return <div>ComponenF</div>;
-};
+function ComponentF() {
+  return (
+    <div>
+      <userContext.Consumer>
+        {(user) => {
+          return <div>User context value {user}</div>;
+        }}
+      </userContext.Consumer>
+    </div>
+  );
+}
 
 export default ComponentF;
