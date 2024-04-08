@@ -22,7 +22,7 @@ function UseMemo() {
     <div>
       <div>
         <button onClick={incrementOne}>Count One - {counterOne}</button>
-        <span>{isEven ? "Even" : "Odd"}</span>
+        <span>{isEven ? "Even" : "Odd        "}</span>
       </div>
       <div>
         <button onClick={incrementTwo}>Count Two - {counterTwo}</button>
