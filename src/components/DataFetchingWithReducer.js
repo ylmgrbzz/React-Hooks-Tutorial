@@ -37,7 +37,8 @@ function DataFetchingWithReducer() {
       })
       .catch((error) => {
         dispatch({ type: "FETCH_ERROR" });
-      });
+      })
+      .finally(() => console.log("I am called"));
   }, []);
   return (
     <div>
